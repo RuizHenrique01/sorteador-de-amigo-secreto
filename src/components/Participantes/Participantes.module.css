@@ -95,6 +95,14 @@
     margin-top: 16px;
 }
 
+.participante_send_button:hover .participante_send_img{
+    background-color: var(--primary-color);
+}
+
+.participante_send_button:hover .participante_send{
+    background-color: var(--primary-color);
+}
+
 .participante_send_img {
     display: none;
 }
@@ -199,7 +207,7 @@
     .participante_send {
         text-align: left;
         flex: 3;
-        padding: 24px 0px 24px 8px;
+        padding: 23.81px 0px 23.81px 8px;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         border-left: none;

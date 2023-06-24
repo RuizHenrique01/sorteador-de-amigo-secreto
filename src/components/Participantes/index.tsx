@@ -2,16 +2,18 @@ import style from './Participantes.module.css';
 import { MdPersonAdd } from 'react-icons/md'
 import { BsPlayCircle } from 'react-icons/bs';
 import Compras from '../../assets/Wavy Buddies Shopping Bags.svg';
+import { useState } from 'react';
 
 const Participantes = () => {
+
+    const [nome, setNome] = useState<string>('');
+
     return (<form className={style.participante_body}>
         <h2 className={style.participante_title}>Vamos começar!</h2>
-
-
         <div className={style.participante_add_input}>
             <div className={style.participante_input}>
-                <MdPersonAdd className={style.participante_input_image} />
-                <input type='text' placeholder='Insira os nomes dos participantes' name='participante' />
+                <MdPersonAdd className={style.participante_input_image} style={ nome ? { color: "white" } : undefined} />
+                <input type='text' value={nome} placeholder='Insira os nomes dos participantes' name='participante' onChange={e => setNome(e.target.value)}/>
             </div>
             <button type='button' className={style.participante_add}>Adicionar</button>
         </div>

@@ -1,0 +1,72 @@
+.formulario {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0px;
+    overflow: auto;
+}
+
+.formulario_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px 0px;
+}
+
+.formulario_header_logo {
+    width: 186px;
+    height: 158px;
+    background-image: url('../assets/Logo\ Branco\ -\ Vertical\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    top: 25px;
+}
+
+.formulario_header_image {
+    width: 328px;
+    height: 158px;
+    position: relative;
+    top: 5.8%;
+}
+
+.formulario_body {
+    height: 100vh;
+    background-color: var(--four-color);
+    border-radius: 50px 50px 0px 0px;
+    border-top: 1px solid black;
+    padding-top: 40px;
+}
+
+@media screen and (min-width: 800px) {
+
+    .formulario {
+        gap: 16px
+    }
+
+    .formulario_header {
+        align-items: center;
+        justify-content: center;
+        height: 55vh;
+        flex-direction: row;
+        padding: 0px;
+    }
+
+    .formulario_header_logo {
+        min-width: 351px;
+        min-height: 117px;
+        /* width: 50%;
+        height: 40%; */
+        background-image: url('../assets/Logo\ Branco\ -\ Horizontal\ 2.svg');
+        top: 0px;
+    }
+
+    .formulario_header_image {
+        min-width: 450px;
+        min-height: 227px; 
+        align-self: flex-end;
+        top: 45px;
+    }
+}

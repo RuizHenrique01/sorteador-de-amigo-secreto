@@ -1,0 +1,150 @@
+.participante_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 8px 16px;
+}
+
+.participante_title {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.participante_add_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.participante_input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+
+.participante_input_image {
+    min-width: 25px;
+    min-height: 25px;
+    padding: 8px .5rem 8px 24px;
+    background-color: white;
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    border: 1px solid black;
+    border-width: 1px 0px 3px 1px;
+    border-right: none;
+    color: var(--button-color);
+    margin: 0px;
+}
+
+.participante_input input {
+    position: relative;
+    left: -.1rem;
+    min-height: 25px;
+    max-height: 25px;
+    font-size: 1rem;
+    padding: 8px 8px 8px .5rem;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+    border: 1px solid black;
+    flex: 1;
+    border-width: 1px 3px 3px 0px;
+    border-left: none;
+    outline: none;
+    margin: 0px;
+}
+
+.participante_add {
+    height: 45px;
+    padding: 8px 32px;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    background-color: var(--button-color);
+    color: var(--third-color);
+    border: 1px solid black;
+    border-width: 1px 3px 3px 1px;
+}
+
+.participante_names {
+    text-align: center;
+    list-style: none;
+    font-weight: 400;
+}
+
+.participante_names li {
+    margin-bottom: 8px;
+}
+
+.participante_names li:last-child {
+    margin-bottom: 0px;
+}
+
+.participante_send {
+    max-width: 150px;
+    padding: 8px 16px;
+    margin-top: 16px;
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+    border: 1px solid black;
+    border-width: 1px 3px 3px 1px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    justify-self: flex-end;
+}
+
+.participante_buy_img {
+    width: 127px;
+    height: 98px;
+    margin-top: 16px;
+}
+
+@media screen and (min-width: 800px) {
+    .participante_add_input {
+        width: 726px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 24px;
+    }
+
+    .participante_input {
+        margin: 0px;    
+        flex: 3;
+    }
+
+    .participante_input_image{
+        text-align: left;
+        padding: 20px 0px 20px 2px;
+        flex: 1;
+    }
+
+    .participante_input input {
+        border-right: none;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        padding: 20px 8px 20px 0px;
+        left: 0px;
+        flex: 4;
+    }
+
+    .participante_add {
+        height: 100%;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        position: relative;
+        left: 0px;
+        padding: 23.32px 16px;
+        flex: 1;
+    }
+}

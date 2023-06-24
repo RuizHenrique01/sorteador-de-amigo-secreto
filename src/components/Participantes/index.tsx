@@ -7,6 +7,14 @@ import { useState } from 'react';
 const Participantes = () => {
 
     const [nome, setNome] = useState<string>('');
+    const [listNome, setListNome] = useState<string[]>([]);
+
+    const handleAddNome = () => {
+        if(nome){
+            setListNome(list => [...list, nome]);
+            setNome('');
+        }
+    }
 
     return (<form className={style.participante_body}>
         <h2 className={style.participante_title}>Vamos começar!</h2>
@@ -15,13 +23,12 @@ const Participantes = () => {
                 <MdPersonAdd className={style.participante_input_image} style={ nome ? { color: "white" } : undefined} />
                 <input type='text' value={nome} placeholder='Insira os nomes dos participantes' name='participante' onChange={e => setNome(e.target.value)}/>
             </div>
-            <button type='button' className={style.participante_add}>Adicionar</button>
+            <button type='button' className={style.participante_add} onClick={handleAddNome}>Adicionar</button>
         </div>
         <ul className={style.participante_names}>
-            <li>Affonso</li>
-            <li>Maria</li>
-            <li>Juliana</li>
-            <li>Luiz</li>
+            {listNome.slice(listNome.length > 4 ? listNome.length - 4 : 0, listNome.length).reverse().map((l,i) => (
+                <li key={i}>{l}</li>
+            ))}
         </ul>
 
         <div className={style.participante_send_foot}>

@@ -1,6 +1,7 @@
 import style from './Formulario.module.css';
 import Participante from '../assets/Wavy Buddies Out of Stock.svg';
 import Participantes from './Participantes';
+import Sorteio from './Sorteio';
 
 const Formulario = () => {
     return (
@@ -12,7 +13,7 @@ const Formulario = () => {
             <div className={style.formulario_body}>
                 {/* <input placeholder="Insira os nomes dos participantes" />
                 <button disabled>Adicionar</button> */}
-                <Participantes/>
+                <Sorteio/>
             </div>
         </div>)
 }

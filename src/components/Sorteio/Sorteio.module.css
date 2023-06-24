@@ -1,0 +1,127 @@
+.sorteio_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 8px 16px;
+}
+
+.sorteio_title {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.sorteio_body select::-ms-expand {
+    display: none;
+}
+
+.sorteio_select {
+    width: 100%;
+    display: grid;
+    font-size: 1rem;
+    padding: 16px 24px;
+    margin-top: 40px;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    border: 1px solid black;
+    border-width: 1px 3px 3px 1px;
+    outline: none;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../../assets/arrow_drop_down.svg');
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    margin-bottom: 32px;
+}
+
+.sorteio_info {
+    max-width: 328px;
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.sorteio_button_body {
+    display: flex;
+    width: 155px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.sorteio_button_body:hover .sorteio_button_img_body {
+    background-color: var(--primary-color);
+}
+
+.sorteio_button_body:hover .sorteio_button {
+    background-color: var(--primary-color);
+}
+
+.sorteio_button_img_body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    border: 1px solid black;
+    border-width: 1px 0px 3px 1px;
+    border-right: none;
+    flex: 1;
+}
+
+.sorteio_button_img {
+    width: 24px;
+    height: 24px;
+    color: white;
+    padding-right: 0.25rem;
+}
+
+.sorteio_button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    flex: 2;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+    border: 1px solid black;
+    border-width: 1px 3px 3px 0px;
+    border-left: none;
+    padding: 20.82px 0px;
+    position: relative;
+    left: -1px;
+}
+
+.sorteio_winner {
+    font-size: 1.125rem;
+    color: var(--secondary-color);
+    margin-bottom: 32px;
+}
+
+.sorteio_aviao_img {
+    width: 125px;
+    height: 114px;
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width: 800px) {
+    .sorteio_title {
+        font-size: 2rem;
+    }
+
+    .sorteio_select {
+        width: 476px;
+        height: 75px;
+    }
+
+    .sorteio_info {
+        width: 100%;
+        font-size: 1.25rem;
+        padding: 0px;
+    }
+}

@@ -52,6 +52,7 @@
         height: 55vh;
         flex-direction: row;
         padding: 0px;
+        padding-left: 24px;
     }
 
     .formulario_header_logo {

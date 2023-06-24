@@ -74,6 +74,7 @@
 }
 
 .participante_names {
+    height: 100px;
     text-align: center;
     list-style: none;
     font-weight: 400;
@@ -87,10 +88,20 @@
     margin-bottom: 0px;
 }
 
-.participante_send {
-    max-width: 150px;
-    padding: 8px 16px;
+.participante_send_foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 16px;
+}
+
+.participante_send_img {
+    display: none;
+}
+
+.participante_send {
+    width: 150px;
+    padding: 8px 16px;
     border-top-left-radius: 38px;
     border-bottom-left-radius: 38px;
     border-top-right-radius: 38px;
@@ -119,13 +130,14 @@
     }
 
     .participante_input {
-        margin: 0px;    
+        margin: 0px;
         flex: 3;
     }
 
-    .participante_input_image{
+    .participante_input_image {
         text-align: left;
         padding: 20px 0px 20px 2px;
+        border-width: 2px 0px 5px 2px;
         flex: 1;
     }
 
@@ -134,8 +146,13 @@
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
         padding: 20px 8px 20px 0px;
+        border-width: 2px 0px 5px 2px;
         left: 0px;
         flex: 4;
+    }
+
+    .participante_names {
+        margin-bottom: 16px;
     }
 
     .participante_add {
@@ -145,6 +162,53 @@
         position: relative;
         left: 0px;
         padding: 23.32px 16px;
+        border-width: 2px 5px 5px 2px;
         flex: 1;
+    }
+
+    .participante_send_foot {
+        width: 728px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .participante_send_button {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+        margin-bottom: 24px;
+    }
+
+    .participante_send_img {
+        display: block;
+        width: 30px;
+        height: 30px;
+        padding: 18px 0px 18px 20px;
+        color: white;
+        background-color: var(--secondary-color);
+        flex: 1;
+        border-top-left-radius: 38px;
+        border-bottom-left-radius: 38px;
+        border: 1px solid black;
+        border-width: 2px 0px 5px 2px;
+    }
+
+    .participante_send {
+        text-align: left;
+        flex: 3;
+        padding: 24px 0px 24px 8px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-left: none;
+        border-width: 2px 5px 5px 0px;
+    }
+
+    .participante_buy_img {
+        width: 237px;
+        height: 183px;
+        margin: 0px;
     }
 }

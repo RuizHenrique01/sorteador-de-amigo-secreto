@@ -1,5 +1,6 @@
 import style from './Participantes.module.css';
 import { MdPersonAdd } from 'react-icons/md'
+import { BsPlayCircle } from 'react-icons/bs';
 import Compras from '../../assets/Wavy Buddies Shopping Bags.svg';
 
 const Participantes = () => {
@@ -21,8 +22,13 @@ const Participantes = () => {
             <li>Luiz</li>
         </ul>
 
-        <button type='submit' className={style.participante_send}>Iniciar bricandeira!</button>
-        <img src={Compras} alt='Compras do participante' className={style.participante_buy_img} />
+        <div className={style.participante_send_foot}>
+            <div className={style.participante_send_button}>
+                <BsPlayCircle className={style.participante_send_img}/>
+                <button type='submit' className={style.participante_send}>Iniciar bricandeira!</button>
+            </div>
+            <img src={Compras} alt='Compras do participante' className={style.participante_buy_img} />
+        </div>
     </form>);
 }
 

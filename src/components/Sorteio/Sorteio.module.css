@@ -98,9 +98,11 @@
 }
 
 .sorteio_winner {
+    height: 21px;
     font-size: 1.125rem;
     color: var(--secondary-color);
     margin-bottom: 32px;
+    text-align: center;
 }
 
 .sorteio_aviao_img {

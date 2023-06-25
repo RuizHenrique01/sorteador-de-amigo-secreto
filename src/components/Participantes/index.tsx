@@ -3,20 +3,26 @@ import { MdPersonAdd } from 'react-icons/md'
 import { BsPlayCircle } from 'react-icons/bs';
 import Compras from '../../assets/Wavy Buddies Shopping Bags.svg';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import useAddNome from '../../state/hook/useAddNome';
 
 const Participantes = () => {
 
-    const [nome, setNome] = useState<string>('');
+    const [nome, setNome] = useState<string>("");
     const [listNome, setListNome] = useState<string[]>([]);
     const navigate = useNavigate()
-
+    const addNome = useAddNome();
+    const inputRef = useRef<HTMLInputElement>(null);
 
     const handleAddNome = () => {
-        if(nome){
+        const nameExist = listNome.filter(l => l === nome)[0];
+        if(nome && !nameExist){
             setListNome(list => [...list, nome]);
-            setNome('');
+            addNome(nome);
         }
+
+        setNome("");
+        inputRef.current?.focus();
     }
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -29,9 +35,9 @@ const Participantes = () => {
         <div className={style.participante_add_input}>
             <div className={style.participante_input}>
                 <MdPersonAdd className={style.participante_input_image} style={ nome ? { color: "white" } : undefined} />
-                <input type='text' value={nome} placeholder='Insira os nomes dos participantes' name='participante' onChange={e => setNome(e.target.value)}/>
+                <input ref={inputRef} type='text' value={nome} placeholder='Insira os nomes dos participantes' name='participante' onChange={e => setNome(e.target.value)}/>
             </div>
-            <button type='button' className={style.participante_add} onClick={handleAddNome}>Adicionar</button>
+            <button type="button" className={style.participante_add} onClick={e => handleAddNome()}>Adicionar</button>
         </div>
         <ul className={style.participante_names}>
             {listNome.slice(listNome.length > 4 ? listNome.length - 4 : 0, listNome.length).reverse().map((l,i) => (

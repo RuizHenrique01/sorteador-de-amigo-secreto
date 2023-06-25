@@ -2,12 +2,15 @@ import style from './Participantes.module.css';
 import { MdPersonAdd } from 'react-icons/md'
 import { BsPlayCircle } from 'react-icons/bs';
 import Compras from '../../assets/Wavy Buddies Shopping Bags.svg';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 const Participantes = () => {
 
     const [nome, setNome] = useState<string>('');
     const [listNome, setListNome] = useState<string[]>([]);
+    const navigate = useNavigate()
+
 
     const handleAddNome = () => {
         if(nome){
@@ -16,7 +19,12 @@ const Participantes = () => {
         }
     }
 
-    return (<form className={style.participante_body}>
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        navigate('/sorteio');
+    }
+
+    return (<form className={style.participante_body} onSubmit={event => handleSubmit(event)}>
         <h2 className={style.participante_title}>Vamos começar!</h2>
         <div className={style.participante_add_input}>
             <div className={style.participante_input}>

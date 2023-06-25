@@ -17,7 +17,7 @@
 .formulario_header_logo {
     width: 186px;
     height: 158px;
-    background-image: url('../assets/Logo\ Branco\ -\ Vertical\ 1.svg');
+    background-image: url('../../assets/Logo\ Branco\ -\ Vertical\ 1.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -36,7 +36,7 @@
     height: 100vh;
     background-color: var(--four-color);
     border-radius: 50px 50px 0px 0px;
-    border-top: 1px solid black;
+    border-top: 2px solid black;
     padding-top: 40px;
 }
 
@@ -60,7 +60,7 @@
         min-height: 117px;
         /* width: 50%;
         height: 40%; */
-        background-image: url('../assets/Logo\ Branco\ -\ Horizontal\ 2.svg');
+        background-image: url('../../assets/Logo\ Branco\ -\ Horizontal\ 2.svg');
         top: 0px;
     }
 

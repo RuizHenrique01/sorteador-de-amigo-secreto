@@ -1,7 +1,6 @@
 import style from './Formulario.module.css';
-import Participante from '../assets/Wavy Buddies Out of Stock.svg';
-import Participantes from './Participantes';
-import Sorteio from './Sorteio';
+import Participante from '../../assets/Wavy Buddies Out of Stock.svg';
+import { Outlet } from 'react-router-dom';
 
 const Formulario = () => {
     return (
@@ -11,9 +10,7 @@ const Formulario = () => {
                 <img src={Participante} className={style.formulario_header_image} alt='Imagem do participante'/>
             </div>
             <div className={style.formulario_body}>
-                {/* <input placeholder="Insira os nomes dos participantes" />
-                <button disabled>Adicionar</button> */}
-                <Sorteio/>
+                <Outlet />
             </div>
         </div>)
 }

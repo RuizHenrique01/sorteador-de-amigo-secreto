@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import Formulario from "./Formulario";
+import Formulario from "./index";
 
 
 test('Quando o input estiver vazio o usuáio não pode ser cadastrado', () => {

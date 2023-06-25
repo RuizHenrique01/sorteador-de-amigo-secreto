@@ -129,6 +129,10 @@
 }
 
 @media screen and (min-width: 800px) {
+    .participante_title {
+        font-size: 2rem;
+    }
+
     .participante_add_input {
         width: 726px;
         justify-content: center;

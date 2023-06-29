@@ -1,16 +1,15 @@
 import style from './Sorteio.module.css';
 import { BsFillDice5Fill } from 'react-icons/bs';
 import Aviao from '../../assets/Avião-papel 1.svg';
-import { useRecoilValue } from 'recoil';
-import listaNome from '../../state/atom';
 import { useState } from 'react';
 import generateRandomPosition from '../../util/generateRandomPosition';
+import { useListaDeParticipantes } from '../../state/hook/useListaDeParticipantes';
 
 const Sorteio = () => {
 
     const [ selected, setSelected ] = useState<string>("");
     const [winner, setWinner] = useState<string>("");
-    const listNome = useRecoilValue<string[]>(listaNome);
+    const listNome = useListaDeParticipantes();
 
     const handleSelect = () => {
         const winnerPosition = generateRandomPosition(Number(selected), listNome.length);

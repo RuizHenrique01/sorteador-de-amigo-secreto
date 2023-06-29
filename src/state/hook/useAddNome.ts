@@ -1,9 +1,9 @@
 import { useSetRecoilState } from 'recoil';
-import listaNome from '../atom';
+import { listaParticipantes } from '../atom';
 
 
 const useAddNome = () => {
-    const setLista = useSetRecoilState(listaNome);
+    const setLista = useSetRecoilState(listaParticipantes);
     return (nome: string) => {
         return setLista(list => [...list, nome]);
     };

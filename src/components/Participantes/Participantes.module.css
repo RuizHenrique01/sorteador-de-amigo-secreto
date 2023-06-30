@@ -73,6 +73,12 @@
     border-width: 1px 3px 3px 1px;
 }
 
+.participante_error_message{
+    text-align: center;
+    margin: 0px 0px 16px;
+    color: red;
+}
+
 .participante_names {
     height: 100px;
     text-align: center;

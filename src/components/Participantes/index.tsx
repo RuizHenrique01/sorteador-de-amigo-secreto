@@ -50,7 +50,7 @@ const Participantes = () => {
                 role='none'>Adicionar</button>
         </div>
 
-        {mensagemDeErro && <p role="alert">{mensagemDeErro}</p>}
+        {mensagemDeErro && <p role="alert" className={style.participante_error_message}>{mensagemDeErro}</p>}
 
         <ul className={style.participante_names}>
             {listNome.slice(listNome.length > 4 ? listNome.length - 4 : 0, listNome.length).reverse().map((l, i) => (

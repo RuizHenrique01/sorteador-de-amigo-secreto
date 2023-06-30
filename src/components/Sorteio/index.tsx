@@ -2,8 +2,8 @@ import style from './Sorteio.module.css';
 import { BsFillDice5Fill } from 'react-icons/bs';
 import Aviao from '../../assets/Avião-papel 1.svg';
 import { useState } from 'react';
-import generateRandomPosition from '../../util/generateRandomPosition';
 import { useListaDeParticipantes } from '../../state/hook/useListaDeParticipantes';
+import { useResultadoSorteio } from '../../state/hook/useResultadoSorteio';
 
 const Sorteio = () => {
 
@@ -11,16 +11,19 @@ const Sorteio = () => {
     const [winner, setWinner] = useState<string>("");
     const listNome = useListaDeParticipantes();
 
-    const handleSelect = () => {
-        const winnerPosition = generateRandomPosition(Number(selected), listNome.length);
-        console.log(winnerPosition, listNome[winnerPosition])
-        setWinner(listNome[winnerPosition]);
+    const resultadoSorteio = useResultadoSorteio();
+
+    const handleSelect = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if(selected){
+            setWinner(resultadoSorteio.get(selected)!);
+        }
     }
 
-    return (<div className={style.sorteio_body}>
+    return (<form className={style.sorteio_body} onSubmit={e => handleSelect(e)}>
         <h2 className={style.sorteio_title}>Quem vai tirar o papelzinho?</h2>
-        <select className={style.sorteio_select} onChange={e => setSelected(e.target.value)} >
-            <option value="" disabled selected>Selecione seu nome</option>
+        <select className={style.sorteio_select} onChange={e => setSelected(e.target.value)} placeholder='Selecione o seu nome'>
+            <option>Selecione seu nome</option>
             {listNome.map((l, i) => (
                 <option key={i} value={i}>{l}</option>
             ))}
@@ -32,12 +35,12 @@ const Sorteio = () => {
             <div className={style.sorteio_button_img_body}>
                 <BsFillDice5Fill className={style.sorteio_button_img}/>
             </div>
-            <button className={style.sorteio_button} onClick={handleSelect}>Sortear!</button>
+            <button type='submit' className={style.sorteio_button}>Sortear!</button>
         </div>
 
-        <p className={style.sorteio_winner}>{winner ? winner : ""}</p>
+        <p className={style.sorteio_winner} role='alert'>{winner ? winner : ""}</p>
         <img src={Aviao} alt='Avião' className={style.sorteio_aviao_img}/>
-    </div>);
+    </form>);
 }
 
 export default Sorteio;

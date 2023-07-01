@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Sorteador de amigo secreto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Web
 
-## Available Scripts
+<table cellpadding="0">
+  <tr style="padding: 0">
+    <td valign="top"><img src="https://github.com/RuizHenrique01/RuizHenrique01/blob/master/assets/sorteador-de-amigo-secreto/tela_lista_participantes.png" width="100%" height="300px"/></td>
+    <td valign="top"><img src="https://github.com/RuizHenrique01/RuizHenrique01/blob/master/assets/sorteador-de-amigo-secreto/tela_sorteio.png" width="100%" height="300px"></td>
+  </tr>
+</table>
 
-In the project directory, you can run:
+### Mobile
 
-### `npm start`
+<table cellpadding="0">
+  <tr style="padding: 0">
+    <td valign="top"><img src="https://github.com/RuizHenrique01/RuizHenrique01/blob/master/assets/sorteador-de-amigo-secreto/tela_lista_participantes_mobile.png" width="100%" height="300px"/></td>
+    <td valign="top"><img src="https://github.com/RuizHenrique01/RuizHenrique01/blob/master/assets/sorteador-de-amigo-secreto/tela_sorteio_mobile.png" width="100%" height="300px" style="object-fit: contains;" /></td>
+  </tr>
+</table>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Sobre
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Este projeto trata-se de uma aplicação Web ao qual realiza sorteios de amigos secretos.
 
-### `npm test`
+## Tecnologias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![React][React.js]][React-url]
+[![TypeScript][TypeScript]][TypeScript-url]
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[TypeScript]: https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript
+[TypeScript-url]: https://www.typescriptlang.org/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalação e Execução
 
-### `npm run eject`
+#### Pré-requisito: para executar essa aplicação é necessário que o [NodeJS](https://nodejs.org/en) esteja instalado em sua máquina.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Primeiramente clone esse repositório em sua máquina:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ ```bash
+ $ git clone https://github.com/RuizHenrique01/sorteador-de-amigo-secreto.git
+ ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+Após isso entre no diretório do repositório e instale todas as dependências do projeto:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+ $ cd sorteador-de-amigo-secreto
+ $ npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+Agora basta executar a aplicação através do seguinte comando:
+
+```bash
+ $ npm start
+```
+
+E para executar os testes basta executar o seguinte comando:
+
+```bash
+ $ npm run test
+```
+
+
+
+
+
+
